@@ -1,59 +1,38 @@
 <html>
 
 <head>
-    <title>Face Recognition Web App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Math Quiz Game!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" type="text/css" href="kwitter.css">
+    <script src="kwitter.js"></script>
 </head>
 
-<body>
-    
-<div class="container">
+<body class= "body_background">
 
     <center>
 
-        <h3 class="btn btn-default heading">Face Recognition Web App</h3>
+        <h1 class="header">
+            <sup>
+                <img src="20220205_205854.jpg" style="width: 15%; height: 10%;">
+            </sup>
+        </h1>
 
-        <br><br>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 login_div"></div>
+        <h3>Talk to anyone you want to!</h3>
+        <h4>Join Kwitter Today</h4>
 
-        <p style="font-size: 22px; font-family:Arial, Helvetica, sans-serif">Model is trained to identify the following objects:</p>
-
-        <b class="name_of_the_objects">
-            Me
-            <hr>
-          Father
-          <hr>
-          Mother
-          <hr>
-          </b>
+        <div class="form-group">
+            <label>User Name: </label>
+            <input type="text" id="user_name" class="form-control" placeholder="User Name" style="width: 20%;">
+        </div>
     
-          <label>Webcam View - </label>
-    
-          <div id="camera"></div>
-    
-          <br><br>
-    
-          <div id="result"></div>
-          <br><br>
-
-        <button onclick="take_snapshot();" class="btn btn-secondary">Capture Image</button>
-          <br><br>
-          <button onclick="check();" class="btn btn-secondary">Identify Image</button>
-          <br><br>
-    
-          <p style="font-size: 22px;">Object : <span id="result_object_name"></span> </p>
-          <p style="font-size: 22px;">Accuracy : <span id="result_object_accuracy"></span> </p>
-    </center>
-</div>
-<script src="main.js"></script>
+        <button id="login_button" class="btn btn-primary" onclick="addUser()" style="background-color: white; color: orangered; font-weight: bold;">Log in</button>
+</center>
 
 </body>
 </html>
